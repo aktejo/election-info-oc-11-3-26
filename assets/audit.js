@@ -188,6 +188,8 @@
     add(sec, "Historical outcome", "process", e.stakes, e.stakesS);
     add(sec, "District coverage", "process", e.district, e.districtS);
     add(sec, "Available evaluation", "process", e.howToRead, e.howToReadS);
+    add(sec, "Slate-wide positions", "process", e.blanket, e.blanketS);
+    add(sec, "Source conflict", "coverage limit", e.conflict, e.conflictS, "coverage");
     add(sec, "Information limits", "coverage limit", e.gap, e.gapS, "coverage");
     JUDICIAL.items.forEach(function (j) {
       add(sec, j.name, "ballot question", j.question, j.questionS);
@@ -199,6 +201,18 @@
       }
       if (j.appointedBy) add(sec, j.name, "appointing governor", j.appointedBy, j.metaS);
       if (j.note) add(sec, j.name, "note", j.note, j.noteS);
+      if (j.args) {
+        (j.args.pro || []).forEach(function (a) {
+          add(sec, j.name, "argument for retention — " + a.by, a.d, a.s);
+        });
+        (j.args.con || []).forEach(function (a) {
+          add(sec, j.name, "argument against retention — " + a.by, a.d, a.s);
+        });
+        if (j.args.conNote) {
+          add(sec, j.name, "no argument against found", j.args.conNote,
+            j.args.conNoteS || [], "negative");
+        }
+      }
     });
   })();
 

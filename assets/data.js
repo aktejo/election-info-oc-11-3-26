@@ -110,6 +110,19 @@ const SOURCES = {
   laistSupreme: { pub: "LAist", t: "California Supreme Court justices: What you need to know", url: "https://laist.com/news/politics/voter-guides/2026-election-california-general-state-supreme-court-evans-groban" },
   sfChronCourts: { pub: "San Francisco Chronicle (editorial board)", t: "Yes or no? The Chronicle's endorsements for California Supreme and appeals court", url: "https://www.sfchronicle.com/opinion/editorials/article/supreme-court-judge-california-22431608.php" },
   cmSupreme: { pub: "CalMatters", t: "Which CA Supreme Court justices are up for election in 2026?", url: "https://calmatters.org/california-voter-guide-2026/supreme-court/" },
+  lacba: { pub: "Los Angeles County Bar Association", t: "California Supreme Court and Court of Appeal Justices Retention Election (statement of Oct. 2, 2026)", url: "https://lacba.org/?pg=lacba-news&blAction=showEntry&blogEntry=152564" },
+  porac: { pub: "PORAC PAC (Peace Officers Research Association of California)", t: "No On Kelli Evans (campaign website)", url: "https://noonkellievans.com" },
+  lectern: { pub: "David S. Ettinger, At the Lectern (Horvitz & Levy LLP)", t: "Police union starts campaign against Justice Evans (Oct. 31, 2026)", url: "https://www.horvitzlevy.com/police-union-starts-campaign-against-justice-evans/" },
+  cmPorac: { pub: "CalMatters (Adam Ashton)", t: "CA police union running campaign against Supreme Court justice (Oct. 31, 2026)", url: "https://calmatters.org/justice/2026/10/porac-judicial-election/" },
+  reformCA: { pub: "Reform California / Carl DeMaio", t: "Reform California Voter Guide \u2014 Orange County", url: "https://www.reformcalifornia.org/voter-guides/orange" },
+  indiMarin: { pub: "Indivisible Marin (Steering Committee)", t: "IndiMarin Voting Guide for California 2026 Midterms", url: "https://www.indivisiblemarin.org/indimarins-voters-guide" },
+  caToday: { pub: "California Today (Mac Douglass, ed.)", t: "2026 California judges guide: Evans, Groban and 62 retention votes", url: "https://californiatoday.com/guides/elections/2026-california-judges-guide/" },
+  sbIndyCody: { pub: "Tari Cody, Presiding Justice, Court of Appeal Second District Div. Six (op-ed, Santa Barbara Independent)", t: "About the Retention Election for California Appellate Justices (Oct. 7, 2026)", url: "https://www.independent.com/2026/10/07/about-the-retention-election-for-california-appellate-justices/" },
+  kpbsSantana: { pub: "KPBS", t: "Judge grants resentencing hearing for 2001 Santana High School shooter (Jan. 7, 2026)", url: "https://www.kpbs.org/news/public-safety/2026/01/07/judge-grants-resentencing-hearing-for-2001-santana-high-school-shooter" },
+  cnsSantana: { pub: "Courthouse News Service", t: "25 years later, San Diego-area high school shooter eyes release", url: "https://www.courthousenews.com/25-years-later-san-diego-area-high-school-shooter-eyes-release/" },
+  kpbsDA: { pub: "KPBS", t: "DA testifies in support of bill to close loophole in state sentencing laws (Apr. 8, 2026)", url: "https://www.kpbs.org/news/quality-of-life/2026/04/08/da-testifies-in-support-of-bill-to-close-loophole-in-state-sentencing-laws" },
+  kpbsJudges: { pub: "KPBS (Kevin Trevellyan)", t: "2026 General Election: California Fourth District Court of Appeal explainer (Oct. 27, 2026)", url: "https://www.kpbs.org/news/politics/2026/10/27/2026-general-election-judicial-races" },
+  hueyJud: { pub: "Craig Huey Voter Guide (Election Forum)", t: "California Judicial Voter Guide, November 3, 2026", url: "https://voterguide.craighuey.com/cajudges/" },
   trellis4th: { pub: "Trellis Law", t: "Fourth District Court of Appeal Retention Votes 2026", url: "https://intelligence.trellis.law/california-judges-2026/court-of-appeal/fourth-district/" }
 };
 
@@ -1141,16 +1154,20 @@ const JUDICIAL = {
   explain: {
     what: "Appellate justices do not run against each other. The governor appoints them, the Commission on Judicial Appointments confirms them, and then voters get a plain yes-or-no question on whether to keep each one. LAist puts it simply: \u201cRetention elections are \u2018yes\u2019 or \u2018no\u2019 questions on whether you want to keep a justice on the bench.\u201d",
     whatS: ["laistCourts"],
-    term: "An appellate justice's term is 12 years, and there are no term limits. A justice who takes over a predecessor's unexpired term may serve less than 12 years on that first go-round.",
-    termS: ["laistCourts"],
-    stakes: "No California appellate justice has lost a retention election since the system began in the 1930s, and sitting justices are nearly always retained. LAist's framing is that your vote here is \u201clargely about sending a signal on whether you support what they\u2019ve done.\u201d",
-    stakesS: ["laistCourts"],
+    term: "An appellate justice's term is 12 years, and there are no term limits. A justice who takes over a predecessor's unexpired term may serve less than 12 years on that first go-round. The seat pays $288,774 a year, and the reason it goes before voters at all is to make justices accountable to the public.",
+    termS: ["laistCourts", "kpbsJudges"],
+    stakes: "No California appellate justice has lost a retention election since the system began in the 1930s, and sitting justices are nearly always retained. The only time California voters have ever removed Supreme Court justices was 1986, when three were ousted over death penalty rulings. LAist's framing is that your vote here is \u201clargely about sending a signal on whether you support what they\u2019ve done.\u201d",
+    stakesS: ["laistCourts", "cmPorac", "cmSupreme"],
     district: "The Fourth Appellate District covers Orange, Imperial, Inyo, Riverside, San Bernardino and San Diego counties. You vote on all of its justices, including ones seated in San Diego and Riverside who may never hear an Orange County case.",
     districtS: ["sosJudicial", "laistCourts"],
-    howToRead: "The State Bar evaluates every nominee before appointment and publishes a rating. Those ratings, shown below, are the only systematic third-party assessment available for most of these justices. Neither Supreme Court justice has any disciplinary citation in the Commission on Judicial Performance's database.",
+    howToRead: "The State Bar evaluates every nominee before appointment and publishes a rating. Those ratings, shown below, are the only systematic third-party assessment of these justices. No justice on this ballot has a disciplinary citation in the Commission on Judicial Performance's database \u2014 which is the standard that both the bar association and the one law professor cited in this debate say should decide your vote, and the standard the groups recommending no do not claim any of them failed.",
     howToReadS: ["laistCourts", "laistSupreme", "sfChronCourts"],
-    gap: "This is the thinnest-information part of your ballot, and that is a real finding rather than a shortcoming of this guide. For most of these justices no published record review, endorsement, or organized campaign exists at all. Where something does exist \u2014 a State Bar rating, an organized opposition campaign \u2014 it is shown. Where nothing does, nothing is shown.",
-    gapS: ["laistCourts", "laistSupreme"]
+    gap: "This is still the thinnest-information part of your ballot. Every justice below now carries arguments on both sides, but be clear about what most of those arguments are: blanket recommendations covering the entire slate, issued without a reason specific to any one justice. Only three justices \u2014 Evans, Rodriguez and Dato \u2014 have anything written about them individually. Nothing has been invented to fill the gap on the rest, and where a side genuinely has no argument, the card says so.",
+    gapS: ["lacba", "reformCA", "trellis4th"],
+    blanket: "Four groups took positions covering every justice on this ballot at once, so the same arguments repeat on the cards below. Recommending yes on all of them: the Los Angeles County Bar Association and Indivisible Marin, joined for the two Supreme Court justices by the San Francisco Chronicle\u2019s editorial board, which endorsed the First and Sixth District justices but not the Fourth. Recommending no on all of them except William Dato: Reform California. A third-party tracker also records blanket no recommendations from the Republican Party of San Diego County. Of these, only the bar association, Indivisible Marin and the Chronicle published their reasoning.",
+    blanketS: ["lacba", "indiMarin", "sfChronCourts", "reformCA", "trellis4th"],
+    conflict: "One source conflict worth knowing before you weigh the conservative recommendations. Two sources agree the Craig Huey guide recommends no on both Supreme Court justices. For the appellate justices its per-justice positions are reported inconsistently: a third-party tracker lists it as recommending no on Do, Motoike and MacAulay and yes on the rest, while another county guide produced by the same publisher lists no on Raphael and Lee. Those cannot both be right, so this guide reports the discrepancy rather than picking a side.",
+    conflictS: ["trellis4th", "hueyJud"]
   },
   items: [
     {
@@ -1161,6 +1178,21 @@ const JUDICIAL = {
       currentTitle: "Associate Justice of the Supreme Court",
       question: "Shall Associate Justice of the Supreme Court JOSHUA GROBAN be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2018", appointedBy: "Jerry Brown", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Won his last retention vote with 68.0% yes in 2022, and advised Gov. Jerry Brown on more than 600 judicial appointments before joining the court — the record a yes vote endorses.", by: "California Today, citing the court’s official biography", s: ["caToday"] },
+          { d: "No organized opposition to his retention surfaced in this cycle, and he has no disciplinary citation in the Commission on Judicial Performance database.", by: "California Today; LAist", s: ["caToday", "laistSupreme"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes, arguing that unseating an appointed judge “should not be taken lightly,” that there are no reported problems with either justice, and that California’s appointment process is thoughtful enough that justices arrive on the ballot already vetted. It adds that hearing little about a justice is probably a good sign.", by: "San Francisco Chronicle editorial board, Oct. 10, 2026", s: ["sfChronCourts"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain,” with a low star rating and no published reasoning specific to him.", by: "Craig Huey Voter Guide", s: ["hueyJud"] },
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "For context rather than criticism: the same tally used against Justice Evans shows Groban cast 22 dissenting votes from denials of review in the 2024–25 term, 10 criminal and 12 civil. No group has made an argument out of it.", by: "Horvitz & Levy’s count, as reported by California Today", s: ["caToday", "lectern"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1171,6 +1203,26 @@ const JUDICIAL = {
       currentTitle: "Associate Justice of the Supreme Court",
       question: "Shall Associate Justice of the Supreme Court KELLI M. EVANS be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Well qualified", ratingYear: "2022", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Argues the criticisms do not meet the standard for a no vote, endorsing UCLA law professor Rick Hasen’s view that “it is only proper to vote against a sitting judge when that judge has done something ethically improper.” A judge’s good-faith application of a statute or constitution is “not an appropriate basis” for voting no.", by: "David S. Ettinger, At the Lectern (Horvitz & Levy), Oct. 31, 2026", s: ["lectern"] },
+          { d: "Says the campaign omits context: other justices also dissented from review denials in the same term, many of her dissents involved cases raising the same or similar issues, and she was frequently applying statutes the Legislature itself passed to expand the rights of criminal defendants.", by: "David S. Ettinger, At the Lectern — whose blog compiled the underlying data the campaign uses", s: ["lectern", "cmPorac"] },
+          { d: "Notes the central number is being described misleadingly: a dissent from a denial of review is a vote to hear a case, not a ruling that reopens anything.", by: "California Today", s: ["caToday"] },
+          { d: "Even PORAC’s own leadership concedes the effort is unlikely to persuade enough voters to remove her, and describes it instead as “a warning shot” at the judiciary — which critics read as an attempt to pressure judges rather than an argument about her fitness.", by: "PORAC vice president Ben Therriault, quoted by CalMatters", s: ["cmPorac"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes, arguing that unseating an appointed judge “should not be taken lightly,” that there are no reported problems with either justice, and that California’s appointment process is thoughtful enough that justices arrive on the ballot already vetted. It adds that hearing little about a justice is probably a good sign.", by: "San Francisco Chronicle editorial board, Oct. 10, 2026", s: ["sfChronCourts"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Says she “went on record 63 times to reopen sometimes unspeakable criminal cases” in a single term, against zero for the Chief Justice, and frames this as putting “criminals ahead of victims.”", by: "PORAC PAC, “No On Kelli Evans”", s: ["porac", "cmPorac"] },
+          { d: "Cites four specific matters: People v. Gray, where she wrote that the outcome in a 1981 killing of a 77-year-old man was a “miscarriage of justice”; People v. Grandberry, a bid to strike three prior serious felonies; People v. Chang, an appeal by a gunman sentenced to 208 years to life for shooting a CHP officer; and LAPPL v. City of Los Angeles, striking down a law on knowingly false misconduct complaints against officers.", by: "PORAC PAC — case descriptions are the campaign’s own; California Today says it has not independently reviewed them", s: ["porac", "caToday"] },
+          { d: "Argues reopened cases impose a lasting cost on victims’ families: one relative says his family has faced his brother’s killer at 17 parole hearings with an 18th set for 2027, calling it “a life sentence for us.”", by: "Eric Carlson, quoted by the PORAC campaign; Crime Victims United founder Harriet Salarno also urges a no vote", s: ["porac", "caToday"] },
+          { d: "Points to her thin trial-court record at the time of nomination — roughly ten months as a judge — and to her being the only one of the seven justices without the State Bar’s top rating.", by: "PORAC PAC", s: ["porac", "laistSupreme"] },
+          { d: "Recommends “do not retain,” with a low star rating and no published reasoning specific to her.", by: "Craig Huey Voter Guide", s: ["hueyJud"] },
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] }
+        ]
+      },
       note: "A political action committee funded by the Peace Officers Research Association of California, one of the state's largest law enforcement organizations, launched a “No On Kelli Evans” effort late in the cycle. LAist reports the PAC did not state its reason. This is the only organized opposition to any justice on your ballot.", noteS: ["laistSupreme"],
       opposition: true
     },
@@ -1182,6 +1234,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice JULIA C. KELETY be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2022", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Revived a student-loan borrower’s class action. She also sits on the Commission on Judicial Performance, the body that disciplines California judges.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1192,6 +1256,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice JOSE S. CASTILLO be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Well qualified", ratingYear: "2022", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Wrote for a 2-1 panel upholding a $46 million verdict for a jiu-jitsu student paralyzed in training.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1202,6 +1278,19 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice TRUC T. DO be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2020", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Ruled that denying resentencing to certain juvenile offenders violates equal protection.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Listed by a third-party tracker as one of three justices on this ballot that the Craig Huey guide recommends against, where it recommends yes on the rest. No reason is recorded, and see the note above about conflicting reports of this guide’s appellate positions.", by: "Craig Huey Voter Guide, via Trellis Law", s: ["trellis4th", "hueyJud"] },
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1212,6 +1301,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice WILLIAM S. DATO be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2023", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Ordered a new trial for a tenant who had been denied a free court reporter.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "The one justice on this ballot recommended for retention across the spectrum: Reform California’s own Orange County guide lists him as “retain” while recommending against the other fourteen, and a third-party tracker records yes recommendations from all four groups it follows, conservative and progressive alike.", by: "Reform California’s guide; Trellis Law", s: ["reformCA", "trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [],
+        conNoteS: ["reformCA", "trellis4th"],
+        conNote: "No argument against retaining Dato was found anywhere in the sources reviewed for this build — including from the groups recommending a no vote on every other justice on this ballot."
+      },
       note: "One third-party judicial tracker lists Dato's State Bar rating as “Well qualified (2026)” rather than the rating shown here. The sources disagree; LAist's complete table is used throughout this section for consistency.", noteS: ["laistCourts"],
       opposition: false
     },
@@ -1223,6 +1324,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice ERAN M. BERMUDEZ be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2026", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Rated “exceptionally well qualified” in the State Bar’s most recent evaluation cycle, in 2026.", by: "LAist’s compilation of State Bar ratings", s: ["laistCourts"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1233,6 +1346,20 @@ const JUDICIAL = {
       currentTitle: "San Diego County Superior Court Judge",
       question: "Shall San Diego County Superior Court Judge LISA RODRIGUEZ be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2025", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Rated “exceptionally well qualified” by the State Bar in 2025 and named in the bar association’s yes recommendation despite not yet sitting on the appellate court.", by: "LAist; Los Angeles County Bar Association", s: ["laistCourts", "lacba"] },
+          { d: "On the ruling she is criticized for, her reasoning was that a 50-years-to-life sentence is the functional equivalent of life without parole, which is the condition that makes the state’s juvenile relief law apply — a reading of the statute, not a judgment about the defendant’s release.", by: "KPBS’s account of the January 2026 ruling", s: ["kpbsSantana"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "The San Diego County District Attorney publicly opposed her January 2026 ruling that the 2001 Santana High School shooter was eligible for resentencing, and appealed it immediately. The DA’s office argues the route she allowed skips the transfer hearing where public-safety risk gets weighed, and notes the parole board found the defendant unsuitable for release in 2024. The appeal was still pending as of late October.", by: "District Attorney Summer Stephan’s office, reported by Courthouse News and KPBS", s: ["cnsSantana", "kpbsDA", "kpbsSantana"] },
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       note: "Not currently an appellate justice. Confirmed to fill a seat and, if retained, would begin a 12-year term in January.", noteS: ["laistCourts"],
       opposition: false
     },
@@ -1244,6 +1371,17 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice DAVID M. RUBIN be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2023", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1254,6 +1392,17 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice COREY G. LEE be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2023", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1264,6 +1413,19 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice MICHAEL J. RAPHAEL be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2018", appointedBy: "Jerry Brown", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Has questioned the practice of full-record reviews in appeals raising no issues. Before the bench he prosecuted the grand jury leak case in the Barry Bonds investigation.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "The only justice on this ballot appointed by a governor other than Gavin Newsom — Jerry Brown, in 2018 — and rated “exceptionally well qualified” at the time.", by: "LAist", s: ["laistCourts"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1274,6 +1436,20 @@ const JUDICIAL = {
       currentTitle: "Presiding Justice",
       question: "Shall Presiding Justice JOANNE MOTOIKE be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2022", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Revived a negligent-supervision claim against a school.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Presiding justice of Division Three, the Santa Ana division — the only division on this ballot that actually sits in Orange County and hears Orange County appeals.", by: "California Today; California Secretary of State", s: ["caToday", "sosJudicial"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Listed by a third-party tracker as one of three justices on this ballot that the Craig Huey guide recommends against. No reason is recorded, and see the note above about conflicting reports of this guide’s appellate positions.", by: "Craig Huey Voter Guide, via Trellis Law", s: ["trellis4th", "hueyJud"] },
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1284,6 +1460,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice THOMAS A. DELANEY be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Well qualified", ratingYear: "2021", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Held that a science camp’s gender-identity discussions with fifth-graders were protected speech.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1294,6 +1482,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice NATHAN R. SCOTT be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2022", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Held that unpaid nursing students on clinical rotations count as interns protected from harassment.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1304,6 +1504,17 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice DEBORAH C. SERVINO be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2023", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1314,6 +1525,18 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice MARTHA K. GOODING be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Exceptionally well qualified", ratingYear: "2022", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Wrote for a 2-1 panel holding that a “friends with benefits” relationship did not count as dating under the domestic violence statute — a divided ruling, and the dissent is on the record.", by: "Trellis Law, summarizing published opinions", s: ["trellis4th"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       opposition: false
     },
     {
@@ -1324,6 +1547,20 @@ const JUDICIAL = {
       currentTitle: "Associate Justice",
       question: "Shall Associate Justice JULIET O. MACAULAY be elected to the office for the term provided by law?", questionS: ["sosJudicial"],
       rating: "Well qualified", ratingYear: "2026", appointedBy: "Gavin Newsom", metaS: ["laistCourts", "laistSupreme"],
+      args: {
+        pro: [
+          { d: "Rated “well qualified” by the State Bar in 2026 and confirmed unanimously by the Commission on Judicial Appointments before reaching this ballot.", by: "LAist; California Today", s: ["laistCourts", "caToday"] },
+          { d: "Strongly recommends a yes vote on every justice on this ballot, saying each has “a demonstrated record of fitness and competence,” none has had a disciplinary issue with the Commission on Judicial Performance, and all were vetted by the JNE Commission before appointment. Its standard: vote yes unless you believe a justice has “demonstrated unfitness to continue serving.”", by: "Los Angeles County Bar Association, Oct. 2, 2026", s: ["lacba"] },
+          { d: "Recommends yes on all California Supreme Court and Court of Appeal retentions. It found no independently substantiated scandal or discipline record, and says it is also worried that removing justices seen as not conservative enough would push the courts rightward. It describes its own review as cursory rather than exhaustive.", by: "Indivisible Marin Steering Committee", s: ["indiMarin"] },
+          { d: "A sitting appellate justice argues publicly for yes votes on the grounds that every justice on the ballot passed a multi-stage vetting — a Judicial Selection Advisory Committee, the Commission on Judicial Nominees Evaluation, and the Commission on Judicial Appointments — and that none has been disciplined by the Commission on Judicial Performance.", by: "Presiding Justice Tari Cody, who is herself on the ballot in the Second District", s: ["sbIndyCody"] }
+        ],
+        con: [
+          { d: "Listed by a third-party tracker as one of three justices on this ballot that the Craig Huey guide recommends against. No reason is recorded, and see the note above about conflicting reports of this guide’s appellate positions.", by: "Craig Huey Voter Guide, via Trellis Law", s: ["trellis4th", "hueyJud"] },
+          { d: "Has no appellate rulings to assess — a voter weighing her record has essentially nothing to weigh.", by: "Trellis Law", s: ["trellis4th"] },
+          { d: "Recommends “do not retain.” Its Orange County guide gives no reason specific to this justice, and no reason for its appellate recommendations at all beyond noting that voters periodically get to decide retention. The guide is paid for by Carl DeMaio’s Assembly committee.", by: "Reform California / Carl DeMaio", s: ["reformCA"] },
+          { d: "Listed as recommending a no vote by a third-party tracker, which does not record a stated reason.", by: "Republican Party of San Diego County, via Trellis Law", s: ["trellis4th"] }
+        ]
+      },
       note: "Not currently an appellate justice. Confirmed to fill a seat and, if retained, would begin a 12-year term in January.", noteS: ["laistCourts"],
       opposition: false
     }

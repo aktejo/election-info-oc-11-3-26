@@ -67,9 +67,14 @@
     });
     var e = JUDICIAL.explain;
     take(e.whatS); take(e.termS); take(e.stakesS); take(e.districtS);
-    take(e.howToReadS); take(e.gapS);
+    take(e.howToReadS); take(e.blanketS); take(e.conflictS); take(e.gapS);
     JUDICIAL.items.forEach(function (j) {
       take(j.questionS); take(j.metaS); take(j.noteS);
+      if (j.args) {
+        (j.args.pro || []).forEach(function (a) { take(a.s); });
+        (j.args.con || []).forEach(function (a) { take(a.s); });
+        take(j.args.conNoteS);
+      }
     });
     NOT_ON_BALLOT.forEach(function (n) { take(n.s); });
     CAVEATS.forEach(function (c) { take(c.s); });
@@ -333,7 +338,8 @@
       var note = args[kind === "pro" ? "proNote" : "conNote"];
       if (!list.length) {
         return '<div class="arg-col ' + cls + '"><div class="arg-head">' + label + "</div>" +
-          '<p class="arg-empty">' + esc(note || "No published argument on this side was found in the sources reviewed for this build.") + "</p></div>";
+          '<p class="arg-empty">' + esc(note || "No published argument on this side was found in the sources reviewed for this build.") +
+          cite(args[kind === "pro" ? "proNoteS" : "conNoteS"]) + "</p></div>";
       }
       return '<div class="arg-col ' + cls + '"><div class="arg-head">' + label + "</div><ul>" +
         list.map(function (a) {
@@ -653,6 +659,7 @@
         (j.currentTitle && j.currentTitle.indexOf("Justice") === -1
           ? '<p class="fnote">Currently: ' + esc(j.currentTitle) + cite(j.questionS) + "</p>" : "") +
         (j.note ? '<p class="fnote">' + esc(j.note) + cite(j.noteS) + "</p>" : "") +
+        argBlock(j.args) +
         '<div class="cand-foot"><button type="button" class="pick-btn" data-judge="' + esc(pid) +
         '" data-mark="yes" aria-pressed="' + (mark === "yes") + '">' +
         (mark === "yes" ? "✓ YES" : "Mark YES") + "</button>" +
@@ -668,6 +675,8 @@
       '<div class="role"><div class="block-label">What your vote realistically does</div><p>' + esc(e.stakes) + cite(e.stakesS) + "</p></div>" +
       '<div class="role"><div class="block-label">Why you vote on San Diego and Riverside justices</div><p>' + esc(e.district) + cite(e.districtS) + "</p></div>" +
       '<div class="role"><div class="block-label">The one systematic measure available</div><p>' + esc(e.howToRead) + cite(e.howToReadS) + "</p></div>" +
+      '<div class="role"><div class="block-label">Who took a position on the whole slate at once</div><p>' + esc(e.blanket) + cite(e.blanketS) + "</p></div>" +
+      '<div class="role"><div class="block-label">Where the sources contradict each other</div><p>' + esc(e.conflict) + cite(e.conflictS) + "</p></div>" +
       '<div class="race-important">⚠ ' + esc(e.gap) + cite(e.gapS) + "</div>" +
       '<div class="judge-grid">' + rows + "</div>" +
       prevNext("view-judicial") + "</section>";
